@@ -28,7 +28,7 @@ def menu():
         add()
     elif option == "M":
         mark()
-    else:
+    elif option == "Q"
         confirm = input("Are you sure you want to quit? - (Y) Yes, (N) No ").upper()
         while confirm not in ['Y','N']:
             confirm = input("Invalid choice, please make another option").upper()
@@ -119,6 +119,12 @@ def mark():
     print(result_4)
     print("-" * 86)
     menu()
+
+def quitApp():
+    f = open('testFile.csv','w')
+    for line in FILES:
+        f.write(line)
+    f.close()
 main()
 
 
