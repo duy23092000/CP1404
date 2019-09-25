@@ -1,0 +1,55 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+                text: 'Sorted By'
+            Spinner:
+                id: spinner
+                text: app.current_sort
+                values:app.sort_choices
+            Label:
+                text: 'Add New Place'
+            Label:
+                text: 'Name:'
+            TextInput:
+                id: name
+            Label:
+                text: 'Country:'
+            TextInput:
+                id: country
+            Label:
+                text: "Priority:"
+            TextInput:
+                id: priority
+            Button:
+                id: add_button
+                text: "Add Place"
+                on_release: app.add_places()
+            Button:
+                id: clear_button
+                text: 'Clear'
+                on_release: app.blank()
+
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                id: status1
+                text: app.message
+                size_hint_y: 0.2
+            BoxLayout:
+                id: entriesBox
+                cols: 1
+                orientation: 'vertical'
+            Label:
+                id: status2
+                text: app.message2
+                size_hint_y: 0.2
+
